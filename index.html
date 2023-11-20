@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Tu Página</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="#obras">Obras</a></li>
+                <li><a href="museos.html">Museos</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+                <li><a href="otros.html">Otros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section id="gustav-klimt-header">
+        <h2>Gustav Klimt</h2>
+    </section>
+
+   
+    <section id="collage">
+        <div class="image-container">
+            <img src="GUSTAV1.jpeg" alt="Gustav">
+        </div>
+
+        <div class="image-container">
+            <img src="GUSTAV2.jpg" alt="Gustav">
+        </div>
+        <div class="image-container">
+            <img src="GUSTAV3.jpg" alt="Gustav">
+        </div>
+        <div class=" image-container">
+          <img src="GUSTAV4.jpg" alt="Gustav">
+        </div>
+        <div class=" image-container">
+          <img src="gustav5.jpg" alt="Gustav">
+        </div>
+
+       
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>

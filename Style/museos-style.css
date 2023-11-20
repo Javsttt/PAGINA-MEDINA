@@ -1,0 +1,71 @@
+
+body {
+  background: rgb(148, 255, 191);
+  background: linear-gradient(267deg, rgba(148, 255, 191, 1) 13%, rgba(163, 0, 0, 1) 64%, rgba(185, 124, 0, 1) 94%);
+  font-family: 'Raleway', sans-serif; 
+}
+
+
+#main-header {
+  background-color: #722e00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; 
+}
+
+#main-header.solid {
+  background-color: #555;
+}
+
+#main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#main-header nav ul li {
+  margin-right: 20px;
+}
+
+#main-header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease; 
+}
+
+#main-header nav ul li a:hover {
+  color: #ffdf76; 
+}
+
+
+
+.museos-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.museos-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.museos-images img:hover {
+  transform: scale(1.05);
+}

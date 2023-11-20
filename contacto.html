@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+    <link rel="stylesheet" href="Style/contacto-style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="index.html">Obras</a></li>
+                <li><a href="museos.html">Museos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="otros.html">Otros</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+
+  
+    <div class="contacto-content">
+        <h1>Contacto</h1>
+        <p>¡Contáctame para cualquier pregunta o comentario!</p>
+
+    
+        <form id="contacto-form" action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-z']+" title="Solo se permiten letras y el caracter '">
+            <span class="error" id="nombre-error"></span>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="email-error"></span>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+
+   
+    <footer>
+     
+    </footer>
+
+  
+    <script>
+        document.getElementById('contacto-form').addEventListener('submit', function (event) {
+            var nombreInput = document.getElementById('nombre');
+            var nombreError = document.getElementById('nombre-error');
+
+          
+            if (!/^[A-Za-z']+$/.test(nombreInput.value)) {
+                nombreError.textContent = 'Nombre inválido. Solo se permiten letras y el caracter \'';
+                event.preventDefault();
+            } else {
+                nombreError.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
